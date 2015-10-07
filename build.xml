@@ -7,13 +7,8 @@
 <!-- the Compile on Save feature is turned off for the project. -->
 <!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
 <!-- in the project's Project Properties dialog box.-->
-<<<<<<< HEAD
 <project name="RobotClient" default="default" basedir=".">
     <description>Builds, tests, and runs the project RobotClient.</description>
-=======
-<project name="RobotServer" default="default" basedir=".">
-    <description>Builds, tests, and runs the project RobotServer.</description>
->>>>>>> origin/master
     <import file="nbproject/build-impl.xml"/>
     <!--
 
