@@ -201,7 +201,7 @@ public class RobotClient {
                 }
                 else if("auto".equals(AnalystMove(TCPInputLine))){
                     AutoMove(CoreStep,IndexOfLen);
-                    //RobotClient.serialFire = 1;
+                    RobotClient.serialFire = 1;
                 }
                 
                 Thread.sleep(1);
@@ -267,7 +267,8 @@ public class RobotClient {
         }
         while (true) {
             while (RobotClient.RobotMove != null && RobotClient.serialFire == 1) {
-                serialPort.serialSend(RobotClient.RobotMove);
+                serialPort.serialSend(RobotClient.RobotMove.replace("\n", "").replace("\r", ""));
+                
                 this.DebugLog("SerialSend : " + RobotClient.RobotMove);
                 RobotClient.serialFire = 0;
                 Thread.sleep(1);
